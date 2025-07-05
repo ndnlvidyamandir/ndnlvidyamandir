@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gallery - NDNL Vidya Mandir</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; background: #f9f9f9; }
+    header { background-color: #d32f2f; color: white; padding: 20px; text-align: center; }
+    section { padding: 30px; }
+    h2 { text-align: center; color: #d32f2f; margin-bottom: 30px; }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 0 10px;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Gallery</h1>
+  <p>A Glimpse of Life at NDNL Vidya Mandir</p>
+</header>
+
+<section>
+  <h2>Campus Life & Events</h2>
+
+  <div class="gallery-grid">
+    <img src="images/school-building.jpg" alt="School Building">
+    <img src="images/assembly.jpg" alt="Morning Assembly">
+    <img src="images/hostel.jpg" alt="Hostel View">
+    <img src="images/yoga.jpg" alt="Yoga Activity">
+    <img src="images/ncc.jpg" alt="NCC Training">
+    <img src="images/event1.jpg" alt="Annual Function">
+    <img src="images/sports.jpg" alt="Sports Day">
+    <img src="images/library.jpg" alt="Students Studying">
+  </div>
+</section>
+
+</body>
+</html>
