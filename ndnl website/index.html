@@ -1,81 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>NDNL Vidya Mandir</title>
-  <style>
-    body { font-family: Arial, sans-serif; background: #f4f4f4; margin: 0; padding: 0; }
-    header { background-color: #d32f2f; color: white; padding: 20px; text-align: center; }
-    nav { background: #333; padding: 10px; text-align: center; }
-    nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
-    section { padding: 20px; }
-    .image-row { display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 20px; }
-    .image-row img { width: 48%; height: 300px; object-fit: cover; border-radius: 8px; box-shadow: 0 0 8px rgba(0,0,0,0.2); }
-    .highlight { background-color: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-    footer { background: #333; color: white; text-align: center; padding: 15px; }
-    .map-link a { color: #d32f2f; text-decoration: none; font-weight: bold; }
-  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-gray-100 text-gray-800">
 
-<header>
-  <h1>NDNL Vidya Mandir</h1>
-  <p>Mudiya, T. Pasgawan, Pilibhit, Uttar Pradesh (आवासीय विद्यालय)</p>
-</header>
+  <!-- Header -->
+  <header class="bg-red-700 text-white py-6 text-center">
+    <h1 class="text-3xl font-bold">NDNL Vidya Mandir</h1>
+    <p class="text-sm mt-1">Mudiya, T. Pasgawan, Pilibhit, Uttar Pradesh (आवासीय विद्यालय)</p>
+  </header>
 
-<nav>
-  <a href="#">Home</a>
-  <a href="about.html">About Us</a>
-  <a href="facilities.html">Facilities</a>
-  <a href="gallery.html">Gallery</a>
-  <a href="academics.html">Academics</a>
-  <a href="admissions.html">Admissions</a>
-  <a href="contact.html">Contact</a>
-</nav>
+  <!-- Navigation -->
+  <nav class="bg-gray-800 text-white">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="text-lg font-bold">Menu</div>
+      <div class="block md:hidden">
+        <button id="menu-toggle" class="focus:outline-none">&#9776;</button>
+      </div>
+      <div id="menu" class="hidden md:flex md:space-x-6 text-sm font-semibold">
+        <a href="#" class="hover:text-red-400">Home</a>
+        <a href="about.html" class="hover:text-red-400">About Us</a>
+        <a href="facilities.html" class="hover:text-red-400">Facilities</a>
+        <a href="gallery.html" class="hover:text-red-400">Gallery</a>
+        <a href="academics.html" class="hover:text-red-400">Academics</a>
+        <a href="admissions.html" class="hover:text-red-400">Admissions</a>
+        <a href="contact.html" class="hover:text-red-400">Contact</a>
+      </div>
+    </div>
 
-<section>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden px-4 pb-3 space-y-2 text-sm font-semibold">
+      <a href="#" class="block hover:text-red-400">Home</a>
+      <a href="about.html" class="block hover:text-red-400">About Us</a>
+      <a href="facilities.html" class="block hover:text-red-400">Facilities</a>
+      <a href="gallery.html" class="block hover:text-red-400">Gallery</a>
+      <a href="academics.html" class="block hover:text-red-400">Academics</a>
+      <a href="admissions.html" class="block hover:text-red-400">Admissions</a>
+      <a href="contact.html" class="block hover:text-red-400">Contact</a>
+    </div>
+  </nav>
 
-  <!-- 🖼️ Two School Images -->
-  <div class="image-row">
-    <img src="school.jpg" alt="School Building 1">
-    <img src="school2.jpg" alt="School Building 2">
-  </div>
+  <!-- Images Section -->
+  <section class="max-w-6xl mx-auto px-4 py-8">
+    <div class="grid md:grid-cols-2 gap-6 mb-6">
+      <img src="school.jpg" alt="School Building 1" class="w-full h-64 object-cover rounded-lg shadow" />
+      <img src="school2.jpg" alt="School Building 2" class="w-full h-64 object-cover rounded-lg shadow" />
+    </div>
 
-  <div class="highlight">
-    <h2>Welcome to NDNL Vidya Mandir</h2>
-    <p>
-      NDNL Vidya Mandir is a premier UP Board affiliated residential (आवासीय) school located in Mudiya, T. Pasgawan, Pilibhit, Uttar Pradesh. 
-      We offer high-quality education in both Hindi and English medium, aiming to build a strong academic and cultural foundation for our students.
-    </p>
+    <!-- Welcome Box -->
+    <div class="bg-white rounded-lg shadow-md p-6">
+      <h2 class="text-2xl font-bold mb-4 text-red-700">Welcome to NDNL Vidya Mandir</h2>
+      <p class="mb-4">
+        NDNL Vidya Mandir is a premier UP Board affiliated residential (आवासीय) school located in Mudiya, T. Pasgawan, Pilibhit, Uttar Pradesh. We offer high-quality education in both Hindi and English medium, aiming to build a strong academic and cultural foundation for our students.
+      </p>
 
-    <h3>🏫 Our Vision</h3>
-    <p>
-      To make quality education accessible to all, while developing discipline, character, and modern skills in students from rural and urban backgrounds.
-    </p>
+      <h3 class="text-xl font-semibold mt-6 mb-2">🏫 Our Vision</h3>
+      <p class="mb-4">
+        To make quality education accessible to all, while developing discipline, character, and modern skills in students from rural and urban backgrounds.
+      </p>
 
-    <h3>📌 Key Features</h3>
-    <ul>
-      <li>UP Board curriculum</li>
-      <li>Residential facility for boys & girls</li>
-      <li>Modern classrooms, library, and digital learning tools</li>
-      <li>NCC Training for students from class 8 onward</li>
-      <li>Special coaching for Navodaya, Sainik Schools & Vidyalaya entrance exams</li>
-      <li>Focus on moral values, culture, and patriotism</li>
-    </ul>
+      <h3 class="text-xl font-semibold mt-6 mb-2">📌 Key Features</h3>
+      <ul class="list-disc list-inside space-y-1 mb-4">
+        <li>UP Board curriculum</li>
+        <li>Residential facility for boys & girls</li>
+        <li>Modern classrooms, library, and digital learning tools</li>
+        <li>NCC Training for students from class 8 onward</li>
+        <li>Special coaching for Navodaya, Sainik Schools & Vidyalaya entrance exams</li>
+        <li>Focus on moral values, culture, and patriotism</li>
+      </ul>
 
-    <h3>📍 School Location</h3>
-    <p class="map-link">
-      <a href="https://maps.app.goo.gl/W87DrsKteesUNyRm8" target="_blank">View on Google Maps</a>
-    </p>
-  </div>
-</section>
+      <h3 class="text-xl font-semibold mt-6 mb-2">📍 School Location</h3>
+      <p>
+        <a href="https://maps.app.goo.gl/W87DrsKteesUNyRm8" target="_blank" class="text-blue-600 hover:underline">View on Google Maps</a>
+      </p>
+    </div>
+  </section>
 
-<footer>
-  <p>&copy; 2025 NDNL Vidya Mandir | All Rights Reserved</p>
-</footer>
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white text-center py-4">
+    &copy; 2025 NDNL Vidya Mandir | All Rights Reserved
+  </footer>
 
+  <script>
+    // Toggle mobile menu
+    document.getElementById('menu-toggle').onclick = function () {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    };
+  </script>
 </body>
 </html>
+
 
 
 
